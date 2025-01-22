@@ -15,6 +15,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '-1HUIzU9Y-6eSG-8vH51w95ySfnN2D2G',
+            'enableCsrfValidation' => false,
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -47,7 +48,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-            ],
+                'telegram-bot/webhook' => 'telegram-bot/webhook',
+                'telegram-bot/set-webhook' => 'telegram-bot/set-webhook',
+         ],
         ],
        
     ],
